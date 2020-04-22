@@ -1,0 +1,16 @@
+
+version: '3.0'
+services:
+  web:
+    image: michal1115/docker_practice:latest
+    ports:
+      - 5000:5000
+    depends_on:
+      - redis
+    environment:
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+  redis:
+    image: redis:6.0-rc3
+    volumes:
+      - ./data:/data:z
