@@ -2,7 +2,7 @@
 version: '3.0'
 services:
   web:
-    image: michal1115/docker_practice:latest
+    image: michal1115/io-lab-docker-ci-public-master:latest
     ports:
       - 5000:5000
     depends_on:
@@ -13,4 +13,4 @@ services:
   redis:
     image: redis:6.0-rc3
     volumes:
-      - ./data:/data:z
+      - ./code:/code:z

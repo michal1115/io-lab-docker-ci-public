@@ -17,4 +17,4 @@ services:
   redis:
     image: redis:6.0-rc4-alpine
     volumes:
-      - ./data:/data:z
+      - ./code:/code:z
